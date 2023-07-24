@@ -1,0 +1,80 @@
+---
+title: "model_fitting2"
+output: html_document
+date: "2023-05-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+df = read.csv("~/jbdouz@gmail.com - Google Drive/My Drive/Colab Notebooks/comp20008assg2/cleaned_full_data.csv", row.names = "No..of.App.")
+df_det = read.csv("~/jbdouz@gmail.com - Google Drive/My Drive/Colab Notebooks/comp20008assg2/cleaned_det_data.csv", row.names = "No..of.App.")
+# dimension: 190 38
+```
+
+```{r}
+# fixing missing values in amount of payment schedule
+df_det$Amount.of.Payment.Schedule..ex.GST. = ifelse(is.na(df_det$Amount.of.Payment.Schedule..ex.GST.), 0, df_det$Amount.of.Payment.Schedule..ex.GST.)
+
+# fixing structural zero issues by removing those datapoints
+df_det = subset(df_det, subset = !(row.names(df_det) %in% c("32", "69", "97", "109", "151", "56", "111", "113", "208", "222", "124")))
+
+# fixing extreme values in response
+df_det$Adjudicate.ratio = ifelse(df_det$Adjudicate.ratio > 1, 1, df_det$Adjudicate.ratio)
+df_det$Adjudicate.ratio.trans = (df_det$Adjudicate.ratio * (dim(df_det)[1] - 1) + 0.5) / dim(df_det)[1]
+
+# dimension: 179, 39
+```
+
+```{r}
+# train-test split
+set.seed(107)
+
+sample = sample(c(TRUE, FALSE), nrow(df_det), replace=TRUE, prob=c(0.9,0.1))
+train  = df_det[sample, ]
+test   = df_det[!sample, ]
+```
+
+```{r}
+# model fitting
+betaf.main = betareg(Adjudicate.ratio.trans ~ Log.claimed.amount + Amount.of.Payment.Schedule..ex.GST. + factor(Region.name) + factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Business.Type.Activity..Claimant.) + factor(Business.Structure..Claimant.) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.) + factor(Business.Structure..Respondent.) + factor(Respondent.advisers) + factor(s21.2B..new.reasons.provided.by.Respondent) + factor(s22.4..b..extension.of.time.sought), data = train, link="logit")
+
+beta1.main = betareg(Adjudicate.ratio.trans ~ factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.), data = train, link="logit")
+summary(beta1.main, type="deviance")
+
+beta2.main = betareg(Adjudicate.ratio.trans ~ factor(Section.of.Act.application.made.under) + factor(Claimant.advisers), data = train, link="logit")
+
+lrtest(betaf.main, beta1.main, beta2.main)
+```
+```{r}
+error.logit = test$Adjudicate.ratio.trans - predict(beta2.main, test)
+plot(error.logit)
+```
+
+```{r}
+# model fitting using loglog link
+betaf.main.loglog = betareg(Adjudicate.ratio.trans ~ Log.claimed.amount + Amount.of.Payment.Schedule..ex.GST. + factor(Region.name) + factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Business.Type.Activity..Claimant.) + factor(Business.Structure..Claimant.) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.) + factor(Business.Structure..Respondent.) + factor(Respondent.advisers) + factor(s21.2B..new.reasons.provided.by.Respondent) + factor(s22.4..b..extension.of.time.sought), data = train, link="loglog")
+# summary(betaf.main.loglog, type="deviance")
+
+beta1.main.loglog = betareg(Adjudicate.ratio.trans ~ factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.), data = train, link="loglog")
+# summary(beta1.main.loglog, type="deviance")
+
+beta2.main.loglog = betareg(Adjudicate.ratio.trans ~ factor(Section.of.Act.application.made.under) + factor(Claimant.advisers), data = train, link="loglog")
+summary(beta2.main.loglog, type="deviance")
+
+lrtest(betaf.main.loglog, beta1.main.loglog, beta2.main.loglog)
+```
+
+```{r}
+plot(beta2.main.loglog, sub.caption = "")
+```
+
+```{r}
+error.loglog = test$Adjudicate.ratio.trans - predict(beta2.main.loglog, test)
+plot(error.loglog, )
+predict(beta1.main.loglog, test)
+```
+
+

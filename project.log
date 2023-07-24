@@ -1,0 +1,473 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.28)  24 JUL 2023 19:54
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**project.tex
+(./project.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2022/09/15 PDF & SVG animations from files and inline graphics
+
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count196
+\calc@Bcount=\count197
+\calc@Adimen=\dimen151
+\calc@Bdimen=\dimen152
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count198
+\calc@Cskip=\skip52
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/media9/pdfbase.sty
+Package: pdfbase 2022/08/04 v0.55 driver independent access to low-level PDF fe
+atures
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count199
+\l__pdf_internal_box=\box51
+)
+\g_pbs_page_int=\count266
+\g_pbs_oc_int=\count267
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2022-04-07 v2.34 Module abspage for zref (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2022-04-07 v2.34 Module base for zref (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\c@abspage=\count268
+Package zref Info: New property: abspage on input line 65.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2022/08/04 v0.22 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count269
+)
+\@anim@box=\box52
+\@anim@measbox=\box53
+\@anim@tmpdima=\dimen153
+\@anim@tmpdimb=\dimen154
+\@anim@num=\count270
+\@anim@curframe=\count271
+\@anim@curframe@zb=\count272
+\@anim@resizeflags=\count273
+\@anim@skipfram=\count274
+\@anim@mulframecnt=\count275
+\@anim@@tmlnfile=\read2
+\@anim@tmpcnt=\count276
+\c@@anim@ltxcnt=\count277
+\@anim@curlayer=\count278
+\@anim@lineno=\count279
+\@anim@curfield=\count280
+\@anim@@resizeflags=\count281
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen155
+\captionmargin=\dimen156
+\caption@leftmargin=\dimen157
+\caption@rightmargin=\dimen158
+\caption@width=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count282
+\c@continuedfloat=\count283
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count284
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count285
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen163
+\lightrulewidth=\dimen164
+\cmidrulewidth=\dimen165
+\belowrulesep=\dimen166
+\belowbottomsep=\dimen167
+\aboverulesep=\dimen168
+\abovetopsep=\dimen169
+\cmidrulesep=\dimen170
+\cmidrulekern=\dimen171
+\defaultaddspace=\dimen172
+\@cmidla=\count286
+\@cmidlb=\count287
+\@aboverulesep=\dimen173
+\@belowrulesep=\dimen174
+\@thisruleclass=\count288
+\@lastruleclass=\count289
+\@thisrulewidth=\dimen175
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count290
+\lst@gtempboxa=\box54
+\lst@token=\toks18
+\lst@length=\count291
+\lst@currlwidth=\dimen176
+\lst@column=\count292
+\lst@pos=\count293
+\lst@lostspace=\dimen177
+\lst@width=\dimen178
+\lst@newlines=\count294
+\lst@lineno=\count295
+\lst@maxwidth=\dimen179
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count296
+\lst@skipnumbers=\count297
+\lst@framebox=\box55
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks19
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen180
+\enit@toks=\toks20
+\enit@inbox=\box56
+\enit@count@id=\count298
+\enitdp@description=\count299
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks21
+\verbatim@line=\toks22
+\verbatim@in@stream=\read3
+)
+
+LaTeX Warning: Unused global option(s):
+    [b4paper].
+
+(./project.aux)
+\openout1 = `project.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: b4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 597.50789pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 890.57127pt, 56.9055pt)
+* \paperwidth=711.3189pt
+* \paperheight=1004.38228pt
+* \textwidth=597.50789pt
+* \textheight=890.57127pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count300
+\scratchdimen=\dimen181
+\scratchbox=\box57
+\nofMPsegments=\count301
+\nofMParguments=\count302
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen182
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count306
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 32.
+
+(./project.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
+\tf@toc=\write3
+\openout3 = `project.toc'.
+
+ [1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<plots/distClaimAmountBeforeLog.png, id=10, 502.2765pt x 339.669pt>
+File: plots/distClaimAmountBeforeLog.png Graphic file (type png)
+<use plots/distClaimAmountBeforeLog.png>
+Package pdftex.def Info: plots/distClaimAmountBeforeLog.png  used on input line
+ 85.
+(pdftex.def)             Requested size: 239.00406pt x 161.6295pt.
+<plots/distClaimAmountAfterLog.png, id=12, 495.7722pt x 339.669pt>
+File: plots/distClaimAmountAfterLog.png Graphic file (type png)
+<use plots/distClaimAmountAfterLog.png>
+Package pdftex.def Info: plots/distClaimAmountAfterLog.png  used on input line 
+90.
+(pdftex.def)             Requested size: 239.00406pt x 163.74933pt.
+ [2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
+c}] [3 <./plots/distClaimAmountBeforeLog.png> <./plots/distClaimAmountAfterLog.
+png>]
+<plots/daysAccepComp.png, id=27, 495.7722pt x 339.669pt>
+File: plots/daysAccepComp.png Graphic file (type png)
+<use plots/daysAccepComp.png>
+Package pdftex.def Info: plots/daysAccepComp.png  used on input line 126.
+(pdftex.def)             Requested size: 358.50838pt x 245.63435pt.
+<plots/corr_all.png, id=28, 912.7701pt x 407.6028pt>
+File: plots/corr_all.png Graphic file (type png)
+<use plots/corr_all.png>
+Package pdftex.def Info: plots/corr_all.png  used on input line 143.
+(pdftex.def)             Requested size: 597.50789pt x 266.82318pt.
+<plots/AdjRatioToLogClaimAmount.png, id=29, 475.5366pt x 343.2825pt>
+File: plots/AdjRatioToLogClaimAmount.png Graphic file (type png)
+<use plots/AdjRatioToLogClaimAmount.png>
+Package pdftex.def Info: plots/AdjRatioToLogClaimAmount.png  used on input line
+ 152.
+(pdftex.def)             Requested size: 358.50838pt x 258.80217pt.
+<NLPimage/img1.png, id=30, 679.53876pt x 30.1125pt>
+File: NLPimage/img1.png Graphic file (type png)
+<use NLPimage/img1.png>
+Package pdftex.def Info: NLPimage/img1.png  used on input line 163.
+(pdftex.def)             Requested size: 358.50838pt x 15.88647pt.
+<NLPimage/img2.png, id=31, 676.5275pt x 30.1125pt>
+File: NLPimage/img2.png Graphic file (type png)
+<use NLPimage/img2.png>
+Package pdftex.def Info: NLPimage/img2.png  used on input line 164.
+(pdftex.def)             Requested size: 358.50838pt x 15.9577pt.
+<NLPimage/img3.png, id=32, 573.14125pt x 49.18375pt>
+File: NLPimage/img3.png Graphic file (type png)
+<use NLPimage/img3.png>
+Package pdftex.def Info: NLPimage/img3.png  used on input line 165.
+(pdftex.def)             Requested size: 358.50838pt x 30.76526pt.
+<NLPimage/img4.png, id=33, 678.535pt x 32.12pt>
+File: NLPimage/img4.png Graphic file (type png)
+<use NLPimage/img4.png>
+Package pdftex.def Info: NLPimage/img4.png  used on input line 166.
+(pdftex.def)             Requested size: 358.50838pt x 16.97057pt.
+<NLPimage/img5.png, id=34, 701.62125pt x 57.21375pt>
+File: NLPimage/img5.png Graphic file (type png)
+<use NLPimage/img5.png>
+Package pdftex.def Info: NLPimage/img5.png  used on input line 167.
+(pdftex.def)             Requested size: 358.50838pt x 29.23535pt.
+ [4 <./plots/daysAccepComp.png>] [5 <./plots/corr_all.png> <./plots/AdjRatioToL
+ogClaimAmount.png>]
+<plots/correlations.png, id=46, 1110.1475pt x 155.58125pt>
+File: plots/correlations.png Graphic file (type png)
+<use plots/correlations.png>
+Package pdftex.def Info: plots/correlations.png  used on input line 181.
+(pdftex.def)             Requested size: 567.63066pt x 79.54953pt.
+File: "code_output/MI_response.txt"  (verbatim)
+ [6 <./NLPimage/img1.png> <./NLPimage/img2.png> <./NLPimage/img3.png> <./NLPima
+ge/img4.png> <./NLPimage/img5.png> <./plots/correlations.png>]
+<plots/AdjudicateRatioHist.png, id=58, 433.62pt x 289.08pt>
+File: plots/AdjudicateRatioHist.png Graphic file (type png)
+<use plots/AdjudicateRatioHist.png>
+Package pdftex.def Info: plots/AdjudicateRatioHist.png  used on input line 206.
+
+(pdftex.def)             Requested size: 358.50838pt x 239.01884pt.
+ (./code_output/final_model.txt)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./plots/AdjudicateRatioHist.png>]
+<plots/rawResidualOnTest.png, id=65, 702.625pt x 433.62pt>
+File: plots/rawResidualOnTest.png Graphic file (type png)
+<use plots/rawResidualOnTest.png>
+Package pdftex.def Info: plots/rawResidualOnTest.png  used on input line 238.
+(pdftex.def)             Requested size: 358.50838pt x 221.25575pt.
+ [8] [9 <./plots/rawResidualOnTest.png>]
+(./project.aux) ) 
+Here is how much of TeX's memory you used:
+ 7397 strings out of 476025
+ 131807 string characters out of 5790017
+ 1905388 words of memory out of 5000000
+ 27755 multiletter control sequences out of 15000+600000
+ 518776 words of font info for 54 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 76i,12n,76p,939b,1211s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on project.pdf (9 pages, 517115 bytes).
+PDF statistics:
+ 136 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+

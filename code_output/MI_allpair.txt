@@ -1,0 +1,16 @@
+ NMI between categorical variables
+variable                                                                         NMI       
+Respondent advisers:Business Type/Activity (Claimant)                            0.19      
+Respondent advisers:s21(2B) new reasons provided by Respondent                   0.23      
+Respondent advisers:s22(4)(b) extension of time sought                           0.19      
+Work category:Business Type/Activity (Claimant)                                  0.16      
+Work category:Business Structure (Claimant)                                      0.22      
+Section of Act application made under:s21(2B) new reasons provided by Respondent 0.17      
+Section of Act application made under:Business Structure (Claimant)              0.15      
+Section of Act application made under:s22(4)(b) extension of time sought         0.17      
+Claimant advisers:Region name                                                    0.15      
+Business Type/Activity (Respondent):Business Type/Activity (Claimant)            0.40      
+Region name:Business Structure (Claimant)                                        0.30      
+Region name:Business Structure (Respondent)                                      0.20      
+Business Type/Activity (Claimant):Business Structure (Respondent)                0.24      
+s21(2B) new reasons provided by Respondent:s22(4)(b) extension of time sought    0.30         

@@ -1,0 +1,122 @@
+---
+title: "comp20008assg2"
+output: html_document
+date: "2023-05-14"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(betareg)
+library(lmtest)
+```
+
+```{r}
+df = read.csv("~/jbdouz@gmail.com - Google Drive/My Drive/Colab Notebooks/comp20008assg2/cleaned_full_data.csv", row.names = "No..of.App.")
+df_det = read.csv("~/jbdouz@gmail.com - Google Drive/My Drive/Colab Notebooks/comp20008assg2/cleaned_det_data.csv", row.names = "No..of.App.")
+dim(df_det)[1]
+```
+
+# Model1: Beta regression to predict Adjudicate ratio
+```{r}
+# fixing missing values in amount of payment schedule
+df_det$Amount.of.Payment.Schedule..ex.GST. = ifelse(is.na(df_det$Amount.of.Payment.Schedule..ex.GST.), 0, df_det$Amount.of.Payment.Schedule..ex.GST.)
+
+# fixing extreme values in response
+df_det$Adjudicate.ratio = ifelse(df_det$Adjudicate.ratio > 1, 1, df_det$Adjudicate.ratio)
+df_det$Adjudicate.ratio.trans = (df_det$Adjudicate.ratio * (dim(df_det)[1] - 1) + 0.5) / dim(df_det)[1]
+```
+
+```{r}
+beta.f.main = betareg(Adjudicate.ratio.trans ~ Claimed.amount..ex.GST. + Amount.of.Payment.Schedule..ex.GST. + factor(Region.name) + factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Business.Type.Activity..Claimant.) + factor(Business.Structure..Claimant.) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.) + factor(Business.Structure..Respondent.) + factor(Respondent.advisers) + factor(s21.2B..new.reasons.provided.by.Respondent) + factor(s22.4..b..extension.of.time.sought), data = df_det, link="logit")
+summary(beta.f.main, type="deviance")
+```
+```{r}
+beta1.main = betareg(Adjudicate.ratio.trans ~ factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.), data = df_det, link="logit")
+summary(beta1.main, type="deviance")
+```
+
+```{r}
+beta2.main = betareg(Adjudicate.ratio.trans ~ factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.), data = df_det, link="logit")
+
+beta3.main = betareg(Adjudicate.ratio.trans ~ factor(Section.of.Act.application.made.under) + factor(Claimant.advisers), data = df_det, link="logit")
+```
+
+
+```{r}
+lrtest(beta.f.main, beta1.main, beta2.main, beta3.main)
+
+summary(beta2.main)
+```
+
+## Try interaction terms between categorical variables
+pairwise zero structure problem, very hard to tackle
+```{r}
+# beta.f.inter = betareg(Adjudicate.ratio.trans ~ Claimed.amount..ex.GST. + Amount.of.Payment.Schedule..ex.GST. + (factor(Region.name) + factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Business.Type.Activity..Claimant.) + factor(Business.Structure..Claimant.) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.) + factor(Business.Structure..Respondent.) + factor(Respondent.advisers) + factor(s21.2B..new.reasons.provided.by.Respondent) + factor(s22.4..b..extension.of.time.sought))^2, data = df_det, link="logit")
+```
+
+
+```{r}
+beta.f.main.loglog = betareg(Adjudicate.ratio.trans ~ Claimed.amount..ex.GST. + Amount.of.Payment.Schedule..ex.GST. + factor(Region.name) + factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Business.Type.Activity..Claimant.) + factor(Business.Structure..Claimant.) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.) + factor(Business.Structure..Respondent.) + factor(Respondent.advisers) + factor(s21.2B..new.reasons.provided.by.Respondent) + factor(s22.4..b..extension.of.time.sought), data = df_det, link="loglog")
+summary(beta.f.main.loglog, type="deviance")
+```
+
+```{r}
+beta1.main.loglog = betareg(Adjudicate.ratio.trans ~ factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.), data = df_det, link="loglog", subset = !(row.names(df_det) %in% c("32", "69", "97", "109", "151", "56", "111", "113", "208", "222", "124")))
+
+beta1.main.loglog = betareg(Adjudicate.ratio.trans ~ factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.), data = df_det, link="loglog")
+
+beta2.main.loglog = betareg(Adjudicate.ratio.trans ~ factor(Section.of.Act.application.made.under) + factor(Claimant.advisers), data = df_det, link="loglog", subset = !(row.names(df_det) %in% c("32", "69", "97", "109", "151", "56", "111", "113", "208", "222", "124")))
+
+lrtest(beta1.main.loglog, beta2.main.loglog)
+
+summary(beta2.main.loglog)
+```
+
+
+```{r}
+AIC(beta2.main, beta2.main.loglog)
+```
+
+```{r}
+# fitting logistic regression model
+logistic.f.main = glm(Adjudicate.ratio.binary ~ Claimed.amount..ex.GST. + Amount.of.Payment.Schedule..ex.GST. + factor(Region.name) + factor(Work.category) + factor(Section.of.Act.application.made.under) + factor(Business.Type.Activity..Claimant.) + factor(Business.Structure..Claimant.) + factor(Claimant.advisers) + factor(Business.Type.Activity..Respondent.) + factor(Business.Structure..Respondent.) + factor(Respondent.advisers) + factor(s21.2B..new.reasons.provided.by.Respondent) + factor(s22.4..b..extension.of.time.sought), data = df_det, family="binomial")
+summary(logistic.f.main)
+```
+```{r}
+logistic1.main = step(logistic.f.main, trace = FALSE)
+logistic1.main = glm(formula = factor(Adjudicate.ratio.binary) ~ factor(Work.category) + 
+    factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + 
+    factor(Business.Type.Activity..Respondent.) + factor(Business.Structure..Respondent.), 
+    family = "binomial", data = df_det, subset = !(row.names(df_det) %in% c("32", "69", "97", "109", "151", "56", "111", "113", "208", "222", "124")))
+logistic2.main = step(logistic1.main, trace = FALSE)
+
+logistic3.main = glm(formula = factor(Adjudicate.ratio.binary) ~  
+    factor(Section.of.Act.application.made.under) + factor(Claimant.advisers) + 
+    factor(Business.Structure..Respondent.), family = "binomial", 
+    data = df_det, subset = !(row.names(df_det) %in% c("32", 
+        "69", "97", "109", "151", "56", "111", "113", "208", 
+        "222", "124")))
+
+anova(logistic1.main, logistic2.main, logistic3.main, test = "Chi")
+
+summary(logistic2.main)
+```
+## structural zero issues: 
+work category only has 1 case and it's 0, no 32
+'Section of Act application made under' == "s.18(1)(a)(ii)" only has 3 cases and all are 1, no 69, 97, 109
+'Claimant advisers' == "Consultant", no 151
+'Business Type/Activity (Respondent)' == "Major Subcontractor", no 56
+'Business Type/Activity (Respondent)' == "Other", no 111, 113, 208, 222
+'Business Type/Activity (Respondent)' == "Project manager", no 124
+
+
+# Model 2: Reverse engineering how Government calculate Certificate fee
+
+# Model 3: 
+
+
+
+

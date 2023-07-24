@@ -1,0 +1,12 @@
+NMI between categorical variables and the response
+variable                                           NMI       
+Section of Act application made under              0.09      
+Claimant advisers                                  0.08      
+s22(4)(b) extension of time sought                 0.04      
+Business Structure (Respondent)                    0.05      
+Business Type/Activity (Respondent)                0.07      
+Business Type/Activity (Claimant)                  0.08      
+Respondent advisers                                0.05      
+Business Structure (Claimant)                      0.08      
+Region name                                        0.06      
+s21(2B) new reasons provided by Respondent         0.03     
